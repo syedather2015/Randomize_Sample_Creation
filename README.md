@@ -1,33 +1,4 @@
 # Randomize VBA Macro
-
-## Overview
-
-`Randomize` is an Excel VBA macro that helps you create a randomized, proportionate sample of rows from your dataset based on unique values in a user-selected column (called the RPG column). It colors selected rows and deletes the rest, providing an easy way to downsample large datasets while preserving representation across groups.
-
-## Features
-
-- User inputs the column letter containing group identifiers.
-- Identifies all unique groups in the selected column.
-- Randomly marks and retains a proportional sample of rows.
-- Deletes rows not included in the sample.
-- Works on the active worksheet.
-
-## How to Use
-
-1. Open your Excel file with data and a header row.
-2. Press `Alt + F11` to open the VBA Editor.
-3. Insert a new module and paste the macro code.
-4. Run the `Randomize` macro.
-5. When prompted, enter the letter of the column that contains the grouping values.
-6. The macro will randomly sample rows proportionally and delete the unselected rows.
-
-## Important Notes
-
-- Make sure your data includes a header row (starting at row 1).
-- The macro operates on the active worksheet.
-- Always back up your data before running macros that delete rows.
-- The fixed value `800` in the macro controls the sampling size — you can adjust it in the code to fit your needs.
-
 ## Code
 
 ```vba
@@ -68,3 +39,31 @@ Sub Randomize()
     
     Worksheets(shName).Cells(1, 1).Select
 End Sub
+```
+## Overview
+
+`Randomize` is an Excel VBA macro that helps you create a randomized, proportionate sample of rows from your dataset based on unique values in a user-selected column (called the RPG column). It colors selected rows and deletes the rest, providing an easy way to downsample large datasets while preserving representation across groups.
+
+## Features
+
+- User inputs the column letter containing group identifiers.
+- Identifies all unique groups in the selected column.
+- Randomly marks and retains a proportional sample of rows.
+- Deletes rows not included in the sample.
+- Works on the active worksheet.
+
+## How to Use
+
+1. Open your Excel file with data and a header row.
+2. Press `Alt + F11` to open the VBA Editor.
+3. Insert a new module and paste the macro code.
+4. Run the `Randomize` macro.
+5. When prompted, enter the letter of the column that contains the grouping values.
+6. The macro will randomly sample rows proportionally and delete the unselected rows.
+
+## Important Notes
+
+- Make sure your data includes a header row (starting at row 1).
+- The macro operates on the active worksheet.
+- Always back up your data before running macros that delete rows.
+- The fixed value `800` in the macro controls the sampling size — you can adjust it in the code to fit your needs.
